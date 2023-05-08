@@ -8,8 +8,11 @@
         mc:Ignorable="d"
         Title="Hello Wpf" Height="450" Width="800">
     <StackPanel>
-        <TextBlock Foreground="Brown" FontSize="16" HorizontalAlignment="Center">
-            Hello
+        <TextBlock 
+            Text="{l:Repeater Text='Helloha- ', Times=6}"
+            Foreground="Brown" FontSize="16" HorizontalAlignment="Center"
+            >
+            
         </TextBlock>
         <Ellipse Width="100" Height="100" Fill="#00FF00"/>
         <Border BorderBrush="Magenta" BorderThickness="4" Padding="4" HorizontalAlignment="Center">
