@@ -1,0 +1,55 @@
+﻿<Window x:Class="Ex01Solution.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ex01Solution"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <local:Exam DisplayName="Colors Exam" Score="1, 2">
+        <local:Exam.Questions>
+            <local:Question 
+                    Id="green-red"
+                    Caption="What do you get if you mix green and red"
+                    CorrectAnswer="2"
+                >
+                <local:Question.Answers>
+                    <sys:String>Brown</sys:String>
+                    <sys:String>Ugly</sys:String>
+                    <sys:String>Yellow</sys:String>
+                    <sys:String>White</sys:String>
+                </local:Question.Answers>
+            </local:Question>
+            <local:Question 
+                    Id="yellow-blue"
+                    Caption="What do you get if you mix yellow and blue"
+                    CorrectAnswer="3"
+                >
+                <local:Question.Answers>
+                    <sys:String>Green</sys:String>
+                    <sys:String>Purple</sys:String>
+                    <sys:String>Red</sys:String>
+                    <sys:String>White</sys:String>
+                </local:Question.Answers>
+            </local:Question>
+            <local:Question 
+                    Id="red-black"
+                    Caption="What do you get if you mix red and black"
+                    CorrectAnswer="0"
+                >
+                <local:Question.Answers>
+                    <sys:String>Red</sys:String>
+                    <sys:String>Dark Red</sys:String>
+                    <sys:String>Purple</sys:String>
+                    <sys:String>Black</sys:String>
+                </local:Question.Answers>
+            </local:Question>
+        </local:Exam.Questions>
+        <local:Exam.Answers>
+            <local:Answer x:Key="red-black" UserAnswer="1" IsCorrect="False"/>
+            <local:Answer x:Key="yellow-blue" UserAnswer="0" IsCorrect="False"/>
+            <local:Answer x:Key="green-red" UserAnswer="2" IsCorrect="True"/>
+        </local:Exam.Answers>
+    </local:Exam>
+</Window>
