@@ -3,7 +3,9 @@
 |     |     |
 | --- | --- |
 | [BareBones](./projects/BareBonesApp/) | The core of WPF - without XAML | 
-| [BareBonesInXaml](./projects/BareBonesInXaml//) | Deep dive into XAML |
+| [BareBonesInXaml](./projects/BareBonesInXaml/) | Deep dive into XAML |
+| [FunWithTemplates](./projects/FunWithTemplates/) | Introduction to Templates |
+
 
 ### The core of WPF
 * We learned that WPF is a rich client framework that works directly through low level graphics drivers (`DirectX`) rather than through the `GDI`
