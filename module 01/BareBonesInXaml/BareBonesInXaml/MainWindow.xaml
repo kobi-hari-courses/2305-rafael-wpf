@@ -1,0 +1,39 @@
+﻿<Window x:Class="BareBonesInXaml.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:l="clr-namespace:BareBonesInXaml" 
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Hello Wpf" Height="450" Width="800">
+    <StackPanel>
+        <TextBlock Foreground="Brown" FontSize="16" HorizontalAlignment="Center">
+            Hello
+        </TextBlock>
+        <Ellipse Width="100" Height="100" Fill="#00FF00"/>
+        <Border BorderBrush="Magenta" BorderThickness="4" Padding="4" HorizontalAlignment="Center">
+            <Button HorizontalAlignment="Center">
+                <l:Person Mother="Shosh, 81">
+                    <l:Person.Relatives>
+                        <l:Person x:Key="father" DisplayName="Ami"/>
+                        <l:Person x:Key="daughter" DisplayName="Ronni"/>
+                        <l:Person x:Key="son">Elad, 16</l:Person>
+                    </l:Person.Relatives>
+                    <l:Person.DisplayName>
+                        <sys:String>Kobi Hari</sys:String>
+                    </l:Person.DisplayName>
+                    <l:Person.Age>
+                        <sys:Int32>42</sys:Int32>
+                    </l:Person.Age>
+                    <l:Person.Friends>
+                        <l:Person DisplayName="Nadav"/>
+                        <l:Person DisplayName="Guy"/>
+                    </l:Person.Friends>
+                </l:Person>
+            </Button>
+
+        </Border>
+        
+    </StackPanel>
+</Window>
