@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithTemplates", "FunWithTemplates\FunWithTemplates.csproj", "{D676303D-FA6E-4B63-97CC-66F925EDA59F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D676303D-FA6E-4B63-97CC-66F925EDA59F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D676303D-FA6E-4B63-97CC-66F925EDA59F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D676303D-FA6E-4B63-97CC-66F925EDA59F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D676303D-FA6E-4B63-97CC-66F925EDA59F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA319C22-6465-4385-B77C-5A192C459BE5}
+	EndGlobalSection
+EndGlobal
