@@ -17,11 +17,10 @@ In this exercise we will practice using Templates in WPF. We will practice both 
     * `Point3D` with Properties: `X`, `Y`, `Z` of type `double`
     * `Character` with Properties: `FontSize`, `FontName`, `Text` of type string
 2. Create the following window
-    * In the resources, create one instance of each class: `RGB`, `Point3D`, `Character`
     * In the main area, divide the area into 3 columns
     * Place a check box in each column
     * Make sure each checkbox has a different background
-    * Define the content of each check box to one of the objects
+    * Define the content of each check box to one of the objects - `RGB`, `Point3D` or `Character`
 
 ![Screenshot 1](./images/Screenshot-1.png)
 
