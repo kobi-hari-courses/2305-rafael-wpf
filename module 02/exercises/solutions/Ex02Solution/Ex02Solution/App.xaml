@@ -1,0 +1,41 @@
+﻿<Application x:Class="Ex02Solution.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Ex02Solution"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type local:Rgb}">
+            <StackPanel>
+                <TextBlock Text="Red" Foreground="Red"/>
+                <TextBlock Text="{Binding R}"/>
+                <TextBlock Text="Green" Foreground="Green"/>
+                <TextBlock Text="{Binding G}"/>
+                <TextBlock Text="Blue" Foreground="Blue"/>
+                <TextBlock Text="{Binding B}"/>
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type local:Point3D}">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontWeight="Bold" Text=" X:" />
+                <TextBlock Text="{Binding X}"/>
+                <TextBlock FontWeight="Bold" Text=" Y:" />
+                <TextBlock Text="{Binding Y}"/>
+                <TextBlock FontWeight="Bold" Text=" Z:"/>
+                <TextBlock Text="{Binding Z}"/>
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type local:Character}">
+            <StackPanel Orientation="Vertical">
+                <TextBlock FontWeight="Bold" Text="FontSize" />
+                <TextBlock Text="{Binding FontSize}"/>
+                <TextBlock FontWeight="Bold" Text="FontName" />
+                <TextBlock Text="{Binding FontName}"/>
+                <TextBlock FontWeight="Bold" Text="Text"/>
+                <TextBlock Text="{Binding Text}"/>
+            </StackPanel>
+        </DataTemplate>
+
+    </Application.Resources>
+</Application>
