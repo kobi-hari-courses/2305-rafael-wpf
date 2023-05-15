@@ -2,6 +2,8 @@
 
 ## Daily Summaries
 * [Module 01](./module%2001/README.md)
+* [Module 02](./module%2002/README.md)
 
 ## Daily Exercises
 * [Module 01](./module%2001/exercises/README.md)
+* [Module 02](./module%2002/exercises/README.md)
