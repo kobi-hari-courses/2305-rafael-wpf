@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="FunWithPanels.FunWithGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FunWithPanels"
+             mc:Ignorable="d" 
+             d:DesignHeight="1000" d:DesignWidth="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <Style TargetType="{x:Type Rectangle}">
+                <Setter Property="Opacity" Value="0.3"/>
+                <Setter Property="Margin" Value="2"/>
+                <Setter Property="RadiusX" Value="10"/>
+                <Setter Property="RadiusY" Value="10"/>
+            </Style>
+        </Grid.Resources>
+        <Rectangle Grid.Column="2" Fill="Green"/>
+        <Rectangle Grid.Column="1" Grid.Row="1" Fill="Red"/>
+        <Rectangle Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2" Fill="Yellow"/>
+        <TextBlock Text="Hello" FontSize="40" Grid.Row="1" Grid.Column="2"/>
+    </Grid>
+</UserControl>
