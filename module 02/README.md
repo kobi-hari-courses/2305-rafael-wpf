@@ -37,7 +37,7 @@
     * This way it may be used everywhere in the application
 
 
-[Responsing to state changes in the control](https://github.com/kobi-hari-courses/2305-rafael-wpf/blob/da4926d107e71f323f5cba52659c2a4666c5b8f6/module%2002/projects/FunWithTemplates/FunWithTemplates/CheckboxExample.xaml#L12-L36)
+* [Responsing to state changes in the control](https://github.com/kobi-hari-courses/2305-rafael-wpf/blob/da4926d107e71f323f5cba52659c2a4666c5b8f6/module%2002/projects/FunWithTemplates/FunWithTemplates/CheckboxExample.xaml#L12-L36)
     * We specify the group and state that we want to respond to 
     * We create a `Storyboard` to define all the changes
     * We create an `Animation` to change a single property of a single object
