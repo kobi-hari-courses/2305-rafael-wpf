@@ -7,6 +7,53 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Ellipse Width="200" Height="100" local:Rotation.Angle="-30" Grid.Column="0">
+            <Ellipse.Style>
+                <Style TargetType="{x:Type Ellipse}">
+                    <Setter Property="Fill" Value="Red"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Fill" Value="Green"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Ellipse.Style>
+        </Ellipse>
+        <StackPanel Grid.Column="1">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Navy"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Padding" Value="20"/>
+                    <Setter Property="Margin" Value="10"/>
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Grid>
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter Margin="{TemplateBinding Padding}"></ContentPresenter>
+                                    </Border>
+                                    <Border 
+                                            Background="{TemplateBinding local:Annotations.Brush}"
+                                            Padding="4" VerticalAlignment="Top" HorizontalAlignment="Right"
+                                            Margin="-8" CornerRadius="15"
+                                            >
+                                        <TextBlock Text="{TemplateBinding local:Annotations.Badge}"/>
+                                    </Border>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </StackPanel.Resources>
+            <Button local:Annotations.Badge="4">Hello</Button>
+            <Button local:Annotations.Badge="Hi" local:Annotations.Brush="LightGreen">Hello</Button>
+        </StackPanel>
 
     </Grid>
 </Window>

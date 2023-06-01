@@ -1,6 +1,6 @@
 # Module 02 - Template - exercise
 
-## Exercise 01 - Templates
+## Exercise - Templates
 ### Introduction
 In this exercise we will practice using Templates in WPF. We will practice both `Control Templates` and `Data Templates` Specifically we will pracice:
 1. Creating Data Templates
