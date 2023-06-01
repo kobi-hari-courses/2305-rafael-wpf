@@ -1,8 +1,10 @@
-# Day 02 - Trees and Templates
+# Day 02 - Trees and Template and Layout
 ### Projects:
 |     |     |
 | --- | --- |
 | [FunWithTemplates](./projects/FunWithTemplates/) | Introduction to Templates |
+| [FunWithPanels](./projects/FunWithPanels/) | Introduction to the common panels in WPF |
+
 
 ### Trees and Templates
 * We understood that WPF uses 2 type of trees
@@ -40,3 +42,48 @@
     * We create a `Storyboard` to define all the changes
     * We create an `Animation` to change a single property of a single object
     * We may add `Transition` to define that the change is done over a period of time (rather than instantly)
+
+## Layout in WPF and Layout properties
+* Layout in WPF is a 2-pass algorithm.
+  * The **measure** pass where each parent asks child to measure the minimum space required for its presentation
+  * The **arrange** pass where eah parent allocates space and position for its child
+* The layout passes allocate the **Bounding Box** for its children.
+* Once a bounding box is allocated, the layout properties arrange the element inside the box
+  * The `Margin` property may allocate some of the bounding box for whitespace and reduce the effective available box
+  * The `Width` and `Height` properties may give the element a size that is different than the bounding box. 
+  * If the `Width` and `Height` are not set, then the `MinWidth`, `MinHeight`, `MaxWidth` and `MaxHeight` properties may still limit the size
+  * The `VerticalAlignment` and `HorizontalAlignment` may set the sizing and position of the element.
+    * If the value `Stretch` is used, then the element will be sized according to the available box. (assuming `Width` and `Height` are not set)
+    * Otherwise, the element will be sized according to the measure pass.
+    * The alignment will set the position of the element within the bounding box
+* Custom layout behavior may be programmed into new element classes by overriding the layout methods:
+  * `MeasureOverride`
+  * `ArrangeOverrride`
+
+  
+## The various Panels of WPF
+* The `Canvas` panel is the most simple panel because it does not really do any calculations. It simply places each element when it asks to be.
+  * Alignment is never relevant because the box allocated for each element is exactly what it requires to be.
+  * Position is controlled using the `Canvas.Top` `Canvas.Left`, `Canvas.Bottom` and `Canvas.Right` properties.
+* The `StackPanel` is a useful panel for stacking elements in one direction
+  * It can either be horizontal or vertical
+  * In the stacking direction, the element will always get exactly the desired size
+  * In the other dimension, the panel calcualtes the max desired size of all the children, and then allocates that maximum to all of them
+*  The `WrapPanel` is a useful panel for stacking and wrapping of elements. It stacks elements in a single direction and then wraps to the next stack if there is not enough space in the container
+*  The `DockPanel` is useful for docking elements to the panel boundaries and to fill the ramainder space
+   *  `LastChildFill` property decides if the last child fills the entire space that remains after previous children are placed
+   *  Each child has a docking direction controlled by the `DockPanel.Dock` property
+   *  Multiple elements may be stacked to the same direction
+*  The `Grid` panel is the most versitile panel of them all
+   *  It is used to fill spaces in 2 dimensions
+   *  First you use the `ColumnDefinitions` and `RowDefinitions` properties to divide the space into rows and columns
+   *  Then you can place elements in cells using the `Grid.Row` and `Grid.Column` properties
+   *  You can span an element on a rectangle of cells using `Grid.RowSpan` and `Grid.ColumnSpan`
+   *  Columns and Rows may have various size logics:
+      *  `auto` sizing - the row or column will have the minimum size required to fit its content
+      *  `pixel` sizing - provides the exact size for the row or column
+      *  `star` sizing - divides the remaining space according to proportional weights
+   *  We have seen how to use `GridSplitter` along with `Grid` in order to allow to user to resize rows and columns
+   *  We have talked about `Size Sharing Group` to allow different grids to share sizing definitions
+
+
