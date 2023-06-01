@@ -24,6 +24,6 @@ In this exrcise we will practice using the `binding` feature of WPF. Specificall
     * If there are no hours - only specify the minutes. If the length is round, only present the hours
     * If the number of minutes is 30 - present it as "2 hours and a half" or "half hour"
 5. Additional challanges
-    * If the start date is in the past, present the title background in light red
+    * If the start date is in the future, present the title background in light red
     * If the meeting is longer than 3 hours, make the title bold
     * If the meeting is in progress (according to start and length), make the background yellow.
