@@ -7,3 +7,4 @@
 ## Daily Exercises
 * [Module 01](./module%2001/exercises/README.md)
 * [Module 02](./module%2002/exercises/README.md)
+* [Module 03](./module%2003/exercises/README.md)
