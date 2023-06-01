@@ -6,6 +6,6 @@
 * [Module 03 - Dependency Properties, Resources and Data Binding](./module%2003/README.md)
 
 ## Daily Exercises
-* [Module 01](./module%2001/exercises/README.md)
-* [Module 02](./module%2002/exercises/README.md)
-* [Module 03](./module%2003/exercises/README.md)
+* [Module 01 - XAML](./module%2001/exercises/README.md)
+* [Module 02 - Templates](./module%2002/exercises/README.md)
+* [Module 03 - Binding](./module%2003/exercises/README.md)
