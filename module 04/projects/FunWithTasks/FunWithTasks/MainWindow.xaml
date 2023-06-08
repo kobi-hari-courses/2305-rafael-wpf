@@ -1,0 +1,28 @@
+﻿<Window x:Class="FunWithTasks.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FunWithTasks"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel Background="#EEEEEE">
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="5">
+            <Button x:Name="btnStart" Click="Button_Click">Start</Button>
+            <Button x:Name="btnCancel" Click="btnCancel_Click">Cancel</Button>
+            <Button x:Name="btnFun" Click="btnFun_Click">Fun</Button>
+            <TextBlock x:Name="txtStatus" Margin="10, 5" Text="Idle"/>
+        </StackPanel>
+        <StackPanel x:Name="stkRange" Visibility="Collapsed" 
+                    Orientation="Vertical" DockPanel.Dock="Right" Background="LightSkyBlue" Width="100">
+            <TextBlock>From</TextBlock>
+            <TextBox x:Name="txtFrom" Margin="5" Text="2"></TextBox>
+            <TextBlock>To</TextBlock>
+            <TextBox x:Name="txtTo" Margin="5" Text="5000"></TextBox>
+            <Button x:Name="btnSetRange" Margin="5" Click="btnSetRange_Click">Ok</Button>
+
+        </StackPanel>
+        <ProgressBar x:Name="progressBar" Height="40" Margin="5" DockPanel.Dock="Top" Minimum="0" Maximum="1"></ProgressBar>
+        <ListBox x:Name="listBox" Margin="5"></ListBox>
+    </DockPanel>
+</Window>
