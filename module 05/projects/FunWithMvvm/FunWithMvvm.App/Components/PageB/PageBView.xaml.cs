@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FunWithMvvm.App
+namespace FunWithMvvm.App.Components.PageB
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PageBView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PageBView : UserControl
     {
-        public MainWindow()
+        public PageBView()
         {
             InitializeComponent();
         }

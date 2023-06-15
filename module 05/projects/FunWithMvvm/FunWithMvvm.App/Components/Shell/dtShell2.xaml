@@ -1,7 +1,13 @@
 ﻿<ResourceDictionary 
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-    xmlns:Local="clr-namespace:FunWithMvvm.App.Components.Shell">
-    <Local:ShellVm x:Key="vm"/>
+    xmlns:Local="clr-namespace:FunWithMvvm.App.Components.Shell" xmlns:il="clr-namespace:FunWithMvvm.App.Components.ItemList">
+    <Local:ShellVm x:Key="vm">
+        <Local:ShellVm.MainPage>
+            <il:ItemListVm ItemsCount="125">
+                
+            </il:ItemListVm>
+        </Local:ShellVm.MainPage>
+    </Local:ShellVm>
 
 </ResourceDictionary>

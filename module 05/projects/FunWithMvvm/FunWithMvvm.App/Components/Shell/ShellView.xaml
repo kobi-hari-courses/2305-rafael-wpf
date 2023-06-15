@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:il="clr-namespace:FunWithMvvm.App.Components.ItemList"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800"
              d:DataContext="{d:DesignData Source=dtShell.xaml}"
@@ -13,5 +14,25 @@
     <StackPanel d:DataContext="{StaticResource vm}">
         <TextBlock Text="Welcome to the answer"/>
         <TextBlock FontSize="40" Text="{Binding TheAnswer}"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Margin="10" Padding="10" 
+                    Command="{Binding NavigateToCommand}"
+                    CommandParameter="A"
+                    >Page A</Button>
+            <Button Margin="10" Padding="10"
+                    Command="{Binding NavigateToCommand}"
+                    CommandParameter="B"
+                    >Page B</Button>
+        </StackPanel>
+
+        <Border Margin="10" BorderBrush="Black" BorderThickness="5" CornerRadius="5">
+            <ContentControl Content="{Binding MainPage}"
+                        ContentTemplateSelector="{StaticResource viewSelector}"
+                        />
+        </Border>
+
+
+
+
     </StackPanel>
 </UserControl>

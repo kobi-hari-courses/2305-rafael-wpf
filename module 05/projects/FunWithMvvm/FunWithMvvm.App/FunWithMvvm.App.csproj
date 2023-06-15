@@ -12,9 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <DesignData Include="Components\Shell\dtShell.xaml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </DesignData>
+    <DesignData Include="Components\Shell\dtShell.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +21,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MvvmTools\MvvmTools.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Components\Details\DetailsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>

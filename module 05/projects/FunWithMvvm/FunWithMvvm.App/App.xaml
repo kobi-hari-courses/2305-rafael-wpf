@@ -1,8 +1,26 @@
 ﻿<Application x:Class="FunWithMvvm.App.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             >
+             xmlns:shared="clr-namespace:FunWithMvvm.App.Shared">
     <Application.Resources>
-         
+        <!--<DataTemplate DataType="{x:Type il:ItemListVm}">
+            <il:ItemListView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type sh:ShellVm}">
+            <sh:ShellView/>
+        </DataTemplate>-->
+
+        <shared:ViewTemplateSelector x:Key="viewSelector">
+            
+        </shared:ViewTemplateSelector>
+        
+        <Style TargetType="{x:Type ContentControl}">
+            <Setter Property="ContentTemplateSelector">
+                <Setter.Value>
+                    <shared:ViewTemplateSelector></shared:ViewTemplateSelector>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </Application.Resources>
 </Application>

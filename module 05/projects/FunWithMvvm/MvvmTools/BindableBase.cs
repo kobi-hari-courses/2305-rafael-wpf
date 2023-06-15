@@ -8,7 +8,7 @@ namespace MvvmTools
         private Dictionary<string, object> _propertyValues = new();
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        public T? Get<T>(T defultValue = default!, [CallerMemberName] string propertyName="")
+        public T? Get<T>(T? defultValue = default, [CallerMemberName] string propertyName="")
         {
             lock(_propertyValues)
             {

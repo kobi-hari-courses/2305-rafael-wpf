@@ -1,5 +1,10 @@
-﻿using FunWithMvvm.App.Components.Shell;
+﻿using FunWithMvvm.App.Components.Details;
+using FunWithMvvm.App.Components.ItemList;
+using FunWithMvvm.App.Components.PageA;
+using FunWithMvvm.App.Components.PageB;
+using FunWithMvvm.App.Components.Shell;
 using FunWithMvvm.App.Services;
+using FunWithMvvm.App.Shared;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -27,11 +32,10 @@ namespace FunWithMvvm.App
             var provider = serviceCollection.BuildServiceProvider();
 
             var win = new Window();
-            var shellView = new ShellView();
+            win.ContentTemplateSelector = new ViewTemplateSelector();
             var vm = provider.GetRequiredService<ShellVm>();
 
-            shellView.DataContext = vm;
-            win.Content = shellView;
+            win.Content = vm;
             win.Show();
 
         }
@@ -39,6 +43,11 @@ namespace FunWithMvvm.App
         private void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<ShellVm>();
+            services.AddTransient<ItemListVm>();
+            services.AddTransient<DetailsVm>();
+            services.AddTransient<PageAVm>();
+            services.AddTransient<PageBVm>();
+
             services.AddSingleton<IAnswersService, AnswersService>();
         }
     }
