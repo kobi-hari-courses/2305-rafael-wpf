@@ -1,0 +1,5 @@
+﻿<ShellVm  
+    xmlns="clr-namespace:FunWithMvvm.App.Components.Shell"
+    TheAnswer="150"
+    >
+</ShellVm>

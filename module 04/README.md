@@ -2,34 +2,7 @@
 ### Projects:
 |     |     |
 | --- | --- |
-| [Fun With Items Control](FunWithItemsControl/) | Cool demo of `ListBox` templateing | 
-| [FunWithTpl](FunWithTpl/) | Introduction to Task Parallel Library |
-
-    ### Items Controls
-* We talked about customization of items controls
-* We saw how to create a `ControlTemplate` to the items control
-  * We saw that we are required to place a `ItemsPresenter` somewhere in the template in order to present the items themselves
-* We saw how to customize the layout
-  * We learned about the `ItemsPanelTemplate` type
-  * We saw how to set the panel using the `ItemsPanel` property. 
-* We learned about the item containers
-  * `ListBoxItem` for list boxes
-  * `ComboBoxItem` for combo boxes
-  * `MenuItem` for menus
-  * `TreeViewItem` for tree views
-* We understood that each items control generates a single "item container" per item it needs to present
-* We understood that each item container is:
-  * A control, so it may be styled and templated
-  * A content control, so we may also template the content
-* We saw how to set the style per item container using the `ItemContainerStyle` property
-* We saw how to create a custom template for the item container using the style
-* In our example, for `ListBoxItem` we saw how to use visual states to determines how an item should look when it is selected
-* We saw how to use the item container style to set the panel attached properties
-  * In our example we set the `Canvas.Top` and `Canvas.Left` properties
-  * We even used Binding inside the style to set these properties
-* Finally, we saw how to use the `ItemTemplate` property to set the `DataTemplate` for each item.
-  * The item container uses these templates as `ContentTemplate`
-
+| [FunWithTasks](FunWithTasks/) | Introduction to Task Parallel Library |
 
 ### Introduction to TPL
 * We talked about the evolution of asynchronous programming though the first versions of the .NET framework
